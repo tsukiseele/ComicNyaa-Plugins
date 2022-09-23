@@ -5,19 +5,11 @@ ComicNyaa's plugin library
 |---------------|:--------:|:----------:|:---:|:-----:|
 | Yandere       | Image    | TsukiSeele | ✔   | ✔     |
 | ChanSankaku   | Image    | TsukiSeele | ✔   | ✔     |
-| IdolSankaku   | Mix      | TsukiSeele | ✔   | ✔     |
 | Safebooru     | Image    | TsukiSeele | ✘   | ✔     |
 | Danbooru      | Image    | TsukiSeele | ✔   | ✔     |
 | Gelbooru      | Image    | TsukiSeele | ✔   | ✔     |
-| ExHentai      | Comic    | TsukiSeele | ✔   | ✘     |
-| E-Hentai      | Comic    | TsukiSeele | ✔   | ✘     |
-| E-Hentai-Lofi | Comic    | TsukiSeele | ✔   | ✘     |
 | Konachan      | Image    | TsukiSeele | ✔   | ✔     |
 | Konachan-Safe | Image    | TsukiSeele | ✘   | ✔     |
-| MoeImg        | ImageSet | TsukiSeele | ✔   | ✘     |
-| N-Hentai      | Comic    | TsukiSeele | ✔   | ✘     |
-| YanderePool   | Comic    | TsukiSeele | ✔   | ✔     |
-| KonachanPool  | Comic    | TsukiSeele | ✔   | ✔     |
 | 3dbooru       | Image    | TsukiSeele | ✔   | ✔     |
 | Atfbooru      | Image    | TsukiSeele | ✔   | ✔     |
 | E-Shuushuu    | Image    | TsukiSeele | ✔   | ✘     |
@@ -29,7 +21,15 @@ ComicNyaa's plugin library
 | Lolibooru     | Image    | TsukiSeele | ✔   | ✔     |
 | MiniTokyo     | Image    | TsukiSeele | ✔   | ✘     |
 | Rule34        | Image    | TsukiSeele | ✔   | ✔     |
-| Sakugabooru   | Video    | TsukiSeele | ✔   | ✔     |
 | Yuribooru     | Image    | TsukiSeele | ✔   | ✔     |
 | Zerochan      | Image    | TsukiSeele | ✔   | ✘     |
+| MoeImg        | ImageSet | TsukiSeele | ✔   | ✘     |
+| ExHentai      | Comic    | TsukiSeele | ✔   | ✘     |
+| E-Hentai      | Comic    | TsukiSeele | ✔   | ✘     |
+| E-Hentai-Lofi | Comic    | TsukiSeele | ✔   | ✘     |
+| N-Hentai      | Comic    | TsukiSeele | ✔   | ✘     |
+| YanderePool   | Comic    | TsukiSeele | ✔   | ✔     |
+| KonachanPool  | Comic    | TsukiSeele | ✔   | ✔     |
 | HAnime        | Video    | TsukiSeele | ✔   | ✘     |
+| Sakugabooru   | Video    | TsukiSeele | ✔   | ✔     |
+| IdolSankaku   | Mix      | TsukiSeele | ✔   | ✔     |
