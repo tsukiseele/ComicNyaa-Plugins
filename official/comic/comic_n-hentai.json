@@ -1,0 +1,89 @@
+{
+  "name": "N-Hentai",
+  "id": 304,
+  "version": 1,
+  "author": "TsukiSeele",
+  "rating": "S",
+  "details": "本子网站，无需梯子",
+  "flag": "",
+  "type": "comic",
+  "icon": "https://nhentai.to/favicon.ico",
+  "headers": {
+    "Referer": "https://nhentai.to/",
+    "Cookie": ""
+  },
+  "sections": {
+    "home": {
+      "index": "https://nhentai.to/?page={page:0}",
+      "rules": {
+        "title": {
+          "selector": "$(.gallery .caption).text()"
+        },
+        "coverUrl": {
+          "selector": "$(.gallery .cover img).attr(data-src)"
+        },
+        "$children": {
+          "selector": "$(.gallery .cover).attr(href)",
+          "capture": ".*",
+          "replacement": "https://nhentai.to$0",
+          "rules": {
+            "title": {
+              "selector": "$(.thumb-container .gallerythumb).attr(href)",
+              "capture": "/\\w+/\\w+/(\\w+)/",
+              "replacement": "$1"
+            },
+            "tags": {
+              "selector": "$(#tags .tags).text()",
+              "merge": true
+            },
+            "coverUrl": {
+              "selector": "$(.gallerythumb img).attr(data-src)"
+            },
+            "originUrl": {
+              "selector": "$(.gallerythumb img).attr(data-src)",
+              "capture": "(https?://)(cdn.nload.xyz/galleries/\\d+/\\d+)t(.\\w+)",
+              "replacement": "$1$2$3"
+            }
+          }
+        }
+      }
+    },
+    "search": {
+      "index": "https://nhentai.to/search?q={keywords:}&page={page:0}",
+      "rules": {
+        "title": {
+          "selector": "$(.gallery .caption).text()"
+        },
+        "coverUrl": {
+          "selector": "$(.gallery .cover img:eq(1)).attr(src)",
+          "capture": "(.*)",
+          "replacement": "https://cdn.nload.xyz$1"
+        },
+        "$children": {
+          "selector": "$(.gallery .cover).attr(href)",
+          "capture": ".*",
+          "replacement": "https://nhentai.to$0",
+          "rules": {
+            "title": {
+              "selector": "$(.thumb-container .gallerythumb).attr(href)",
+              "capture": "/\\w+/\\w+/(\\w+)/",
+              "replacement": "$1"
+            },
+            "tags": {
+              "selector": "$(#tags .tags).text()",
+              "merge": true
+            },
+            "coverUrl": {
+              "selector": "$(.gallerythumb img).attr(data-src)"
+            },
+            "originUrl": {
+              "selector": "$(.gallerythumb img).attr(data-src)",
+              "capture": "(.+)(\\d+)t(.\\w+)",
+              "replacement": "$1$2$3"
+            }
+          }
+        }
+      }
+    }
+  }
+}

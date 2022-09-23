@@ -1,0 +1,47 @@
+{
+  "id": 916,
+  "version": 2,
+  "name": "Minitokyo",
+  "author": "TsukiSeele",
+  "type": "image",
+  "rating": "S",
+  "details": "ACG壁纸站点，对插件的兼容较差，凑合着用",
+  "icon": "http://gallery.minitokyo.net/favicon.ico",
+  "sections": {
+    "home": {
+      "index": "http://gallery.minitokyo.net/wallpapers?order=id&page={page:0}",
+      "rules": {
+        "title": {
+          "selector": "$(ul.wallpapers > li > a > img).attr(alt)"
+        },
+        "coverUrl": {
+          "selector": "$(ul.wallpapers > li > a > img).attr(src)"
+        },
+        "$children": {
+          "selector": "$(ul.wallpapers > li > a).attr(href)",
+          "rules": {
+            "title": {
+              "selector": "$(div#preview > p).text()"
+            },
+            "tags": {
+              "selector": "$(div#preview > a > img).attr(alt)"
+            },
+            "originUrl": {
+              "selector": "$(div#preview > a).attr(href)"
+            },
+            "sampleUrl": {
+              "selector": "$(div#preview > a > img).attr(src)"
+            },
+            "coverUrl": {
+              "selector": "$(div#preview > a > img).attr(src)"
+            }
+          }
+        }
+      }
+    },
+    "search": {
+      "index": "http://www.minitokyo.net/{keywords:}",
+      "reuse": "home"
+    }
+  }
+}

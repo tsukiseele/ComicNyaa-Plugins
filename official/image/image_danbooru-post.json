@@ -1,0 +1,56 @@
+{
+  "id": 904,
+  "version": 1,
+  "name": "Danbooru",
+  "author": "TsukiSeele",
+  "type": "image",
+  "icon": "https://danbooru.donmai.us/favicon.ico",
+  "rating": "Q",
+  "details": "Booru图库，收录ACGN插画",
+  "sections": {
+    "home": {
+      "index": "https://danbooru.donmai.us/posts?page={page:0}",
+      "rules": {
+        "title": {
+          "selector": "$(#posts .post-preview).attr(data-id)",
+          "capture": ".*",
+          "replacement": "Danbooru $0"
+        },
+        "coverUrl": {
+          "selector": "$(#posts .post-preview-image).attr(src)"
+        },
+        "tags": {
+          "selector": "$(#posts .post-preview).attr(data-tags)"
+        },
+        "info": {
+          "selector": "$(#posts .post-preview).attr(data-pixiv-id)"
+        },
+        "$children": {
+          "selector": "$(#posts .post-preview-link).attr(href)",
+          "capture": "(.*)",
+          "replacement": "https://danbooru.donmai.us$1",
+          "rules": {
+            "sampleUrl": {
+              "selector": "$(#image).attr(src)"
+            },
+            "largerUrl": {
+              "selector": "$(#post-option-view-large a).attr(href)"
+            },
+            "originUrl": {
+              "selector": "$(#post-option-view-original a).attr(href)"
+            },
+            "datetime": {
+              "selector": "$(script#forum-posts-latest).html()",
+              "capture": "(\\d{4}-\\d{2}-\\d{2})T(\\d{2}:\\d{2}:\\d{2})",
+              "replacement": "$1 $2"
+            }
+          }
+        }
+      }
+    },
+    "search": {
+      "index": "https://danbooru.donmai.us/posts?page={page:}&tags={keywords:}",
+      "reuse": "home"
+    }
+  }
+}
