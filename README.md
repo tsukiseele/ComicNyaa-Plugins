@@ -1,8 +1,8 @@
 # ComicNyaa-Plugins
 ComicNyaa's plugin library
 
-| Name          | Type     | Author     | R18 | Booru |
-|---------------|:--------:|:----------:|:---:|:-----:|
+| Name          | Type     | Author     | NSFW | Booru |
+|---------------|:--------:|:----------:|:----:|:-----:|
 | Yandere       | Image    | TsukiSeele | ✔   | ✔     |
 | ChanSankaku   | Image    | TsukiSeele | ✔   | ✔     |
 | Safebooru     | Image    | TsukiSeele | ✘   | ✔     |
